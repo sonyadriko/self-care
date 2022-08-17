@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/drawable/bg_header.xml" value="0.2985" />
+        <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_splash_screen.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_splash_screen.xml" value="0.2684563758389262" />
       </map>
     </option>
   </component>

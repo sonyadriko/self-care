@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Self-Care</string>
+    <string name="your_password">Your Password</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="already_have_an_account">Already have an account? Sign in</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password">Password</string>
+    <string name="your_name">Your Name</string>
+    <string name="todo">TODO</string>
+    <string name="name" />
 </resources>
