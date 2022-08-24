@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent);
         }
         withoutlogin.setOnClickListener{
-            val intent = Intent(this, HomeFragment::class.java)
+            val intent = Intent(this, HomeActivity2::class.java)
             startActivity(intent);
         }
     }

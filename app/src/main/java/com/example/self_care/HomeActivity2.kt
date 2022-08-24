@@ -13,7 +13,19 @@ class HomeActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHome2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        replaceFragment(HomeFragment())
 
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.home -> replaceFragment(HomeFragment())
+                R.id.profile -> replaceFragment(ProfileFragment())
+
+                else -> {
+
+                }
+            }
+            true
+        }
         // do your works here
         // binding.bottomNavigationView
     }
