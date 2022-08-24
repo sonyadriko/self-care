@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SelfCare">
         <activity
+            android:name=".HomeActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
