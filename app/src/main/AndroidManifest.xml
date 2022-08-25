@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SelfCare">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PreTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity2"
             android:exported="false" />
         <activity
@@ -18,9 +24,7 @@
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true">

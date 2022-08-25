@@ -28,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_margin="25dp"
                 android:text="Uji Awal"
+                android:id="@+id/buttonUjiAwal"
                 android:background="@color/black"
                 android:textColor="@color/white"
                 android:layout_height="wrap_content"/>
