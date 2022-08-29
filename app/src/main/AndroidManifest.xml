@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SelfCare">
         <activity
+            android:name=".ArtikelActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResultActivity"
             android:exported="false" />
         <activity
@@ -24,7 +27,6 @@
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
-
         <activity
             android:name=".SplashScreen"
             android:exported="true">
