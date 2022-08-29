@@ -3,7 +3,7 @@ package com.example.self_care.view.home
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.self_care.ProfileFragment
+import com.example.self_care.view.profile.ProfileFragment
 import com.example.self_care.R
 import com.example.self_care.databinding.ActivityHome2Binding
 import com.example.self_care.view.artikel.ArtikelFragment
