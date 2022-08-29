@@ -1,14 +1,14 @@
-package com.example.self_care
+package com.example.self_care.view.test
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import android.util.Log
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
+import com.example.self_care.R
+import com.example.self_care.domain.QuestionData
 import kotlinx.android.synthetic.main.activity_pre_test.*
 
 class PreTestActivity : AppCompatActivity() {
@@ -27,7 +27,7 @@ class PreTestActivity : AppCompatActivity() {
 
 //        Name=intent.getStringExtra(setData.name)
 
-        questionList=setData.getQuestion()
+        questionList=QuestionData.getQuestion()
 
         setQuestion()
 
@@ -56,11 +56,11 @@ class PreTestActivity : AppCompatActivity() {
                 val question=questionList!![currentPosition-1]
                 if(selecedOption!=question.correct_ans)
                 {
-                    setColor(selecedOption,R.drawable.wrong_question_option)
+                    setColor(selecedOption, R.drawable.wrong_question_option)
                 }else{
                     score++;
                 }
-                setColor(question.correct_ans,R.drawable.correct_question_option)
+                setColor(question.correct_ans, R.drawable.correct_question_option)
                 if(currentPosition==questionList!!.size)
                     submit.text="FINISH"
                 else
@@ -74,7 +74,7 @@ class PreTestActivity : AppCompatActivity() {
                     else->{
                         var intent= Intent(this,Result::class.java)
 //                        intent.putExtra(setData.name,Name.toString())
-                        intent.putExtra(setData.score,score.toString())
+                        intent.putExtra(QuestionData.score,score.toString())
                         intent.putExtra("total size",questionList!!.size.toString())
 
                         startActivity(intent)
@@ -131,7 +131,7 @@ class PreTestActivity : AppCompatActivity() {
         for(op in optionList)
         {
             op.setTextColor(Color.parseColor("#555151"))
-            op.background=ContextCompat.getDrawable(this,R.drawable.question_option)
+            op.background=ContextCompat.getDrawable(this, R.drawable.question_option)
             op.typeface= Typeface.DEFAULT
         }
     }
@@ -140,7 +140,7 @@ class PreTestActivity : AppCompatActivity() {
 
         setOptionStyle()
         selecedOption=opt
-        view.background=ContextCompat.getDrawable(this,R.drawable.selected_question_option)
+        view.background=ContextCompat.getDrawable(this, R.drawable.selected_question_option)
         view.typeface= Typeface.DEFAULT_BOLD
         view.setTextColor(Color.parseColor("#000000"))
 
