@@ -7,7 +7,7 @@
     tools:context=".view.artikel.ArtikelActivity">
 
     <TextView
-        android:id="@+id/headingArtikel"
+        android:id="@+id/heading_artikel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="16dp"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headingArtikel"
+        app:layout_constraintTop_toBottomOf="@+id/heading_artikel"
         tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,7 +37,7 @@
 
 
             <ImageView
-                android:id="@+id/image_heading"
+                android:id="@+id/image_artikel"
                 android:layout_width="wrap_content"
                 android:layout_height="300dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
                 app:srcCompat="@drawable/a" />
 
             <TextView
-                android:id="@+id/news"
+                android:id="@+id/news_artikel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lineHeight="24dp"
@@ -58,7 +58,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/image_heading" />
+                app:layout_constraintTop_toBottomOf="@+id/image_artikel" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

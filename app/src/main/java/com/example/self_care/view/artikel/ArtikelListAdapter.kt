@@ -35,7 +35,7 @@ class ArtikelListAdapter(
 
         holder.itemView.setOnClickListener {
             onClickListener.onClick(
-                data = "Ini adalah data",
+                data = currentItem,
                 position = position
             )
         }

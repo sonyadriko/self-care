@@ -72,7 +72,7 @@ class PreTestActivity : AppCompatActivity() {
                         setQuestion()
                     }
                     else->{
-                        var intent= Intent(this,Result::class.java)
+                        var intent= Intent(this,ResultActivity::class.java)
 //                        intent.putExtra(setData.name,Name.toString())
                         intent.putExtra(QuestionData.score,score.toString())
                         intent.putExtra("total size",questionList!!.size.toString())

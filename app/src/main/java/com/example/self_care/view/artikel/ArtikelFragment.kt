@@ -64,17 +64,33 @@ class ArtikelFragment : Fragment(), OnClickListener {
             getString(R.string.head_6),
             getString(R.string.head_7),
             getString(R.string.head_8),
+        )
+
+        artikel = arrayOf(
+            getString(R.string.news_a),
+            getString(R.string.news_b),
+            getString(R.string.news_c),
+            getString(R.string.news_d),
+            getString(R.string.news_e),
+            getString(R.string.news_f),
+            getString(R.string.news_g),
+            getString(R.string.news_h),
+
+
             )
 
         for (i in imageId.indices) {
-            val artikel = Artikel(imageId[i], heading[i])
+            val artikel = Artikel(imageId[i], heading[i], artikel[i])
             artikelArrayList.add(artikel)
         }
 
     }
 
     override fun onClick(data: Any, position: Int) {
-        val intent = Intent(requireContext(), ArtikelActivity::class.java)
+        val intent = Intent(requireContext(), ArtikelActivity::class.java).putExtra(
+            "heading",
+            data as Artikel
+        )
         startActivity(intent)
     }
 }

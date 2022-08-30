@@ -1,3 +1,7 @@
 package com.example.self_care.domain
 
-data class Artikel(var titleImage: Int, var heading:String)
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class Artikel(val titleImage: Int, val heading:String, val content:String) : Parcelable
