@@ -45,6 +45,27 @@ class ArtikelFragment : Fragment(), OnClickListener {
     private fun dataInitialize() {
         artikelArrayList = arrayListOf<Artikel>()
 
+        imageId = arrayOf(
+            R.drawable.a,
+            R.drawable.b,
+            R.drawable.c,
+            R.drawable.d,
+            R.drawable.e,
+            R.drawable.f,
+            R.drawable.g,
+            R.drawable.h,
+        )
+        heading = arrayOf(
+            getString(R.string.head_1),
+            getString(R.string.head_2),
+            getString(R.string.head_3),
+            getString(R.string.head_4),
+            getString(R.string.head_5),
+            getString(R.string.head_6),
+            getString(R.string.head_7),
+            getString(R.string.head_8),
+            )
+
         for (i in imageId.indices) {
             val artikel = Artikel(imageId[i], heading[i])
             artikelArrayList.add(artikel)
