@@ -4,7 +4,6 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/drawable/bg_header.xml" value="0.2985" />
-        <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_artikel.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_home.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_home2.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_login.xml" value="0.22" />
@@ -15,6 +14,7 @@
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/fragment_home.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/fragment_profile.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/layout/activity_artikel.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_home2.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_pre_test.xml" value="0.35625" />
       </map>
