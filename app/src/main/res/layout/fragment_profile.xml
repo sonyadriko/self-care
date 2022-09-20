@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".view.profile.ProfileFragment">
 
     <RelativeLayout
         android:id="@+id/layoutMain"
@@ -13,16 +13,16 @@
         android:padding="20dp">
 
         <RelativeLayout
+            android:id="@+id/layoutAkun"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/layoutAkun">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/picAkun"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/desain_image"
-                android:src="@drawable/ic_baseline_person_24"/>
+<!--            <ImageView-->
+<!--                android:id="@+id/picAkun"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:background="@drawable/desain_image"-->
+<!--                android:src="@drawable/ic_baseline_person_24" />-->
 
             <TextView
                 android:id="@+id/tvNamaAkun"
@@ -30,18 +30,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_toEndOf="@+id/picAkun"
-                android:layout_toRightOf="@+id/picAkun" />
+                android:text="Nama" />
+<!--                android:layout_toEndOf="@+id/picAkun"-->
+<!--                android:layout_toRightOf="@+id/picAkun" -->
 
-            <TextView
-                android:id="@+id/tvEditAkun"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvNamaAkun"
-                android:layout_marginLeft="20dp"
-                android:layout_toEndOf="@id/picAkun"
-                android:layout_toRightOf="@id/picAkun"
-                android:text="Edit profil" />
+<!--            <TextView-->
+<!--                android:id="@+id/tvEmailAkun"-->
+<!--                style="@style/Base.TextAppearance.AppCompat.Large"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Email"-->
+<!--                android:layout_below="@id/tvNamaAkun"-->
+
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_toEndOf="@+id/picAkun"-->
+<!--                android:layout_toRightOf="@+id/picAkun" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditAkun"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvEmailAkun"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_toEndOf="@id/picAkun"-->
+<!--                android:layout_toRightOf="@id/picAkun"-->
+<!--                android:text="Edit profil" />-->
 
         </RelativeLayout>
 
@@ -51,12 +64,12 @@
             android:id="@+id/layoutButton"
             android:layout_below="@+id/layoutAkun"
             android:layout_marginTop="20dp">
+
             <Button
+                android:id="@+id/buttonLogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button_keluar"
-                android:text="Keluar"
-                />
+                android:text="Keluar" />
         </RelativeLayout>
     </RelativeLayout>
 

@@ -58,7 +58,7 @@
         <!--        tools:ignore="MissingConstraints" />-->
 
         <EditText
-            android:id="@+id/ETname"
+            android:id="@+id/edtNameRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -91,7 +91,7 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/ETemail"
+            android:id="@+id/edtEmailRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -137,7 +137,7 @@
         <!--        tools:ignore="MissingConstraints" />-->
 
         <EditText
-            android:id="@+id/ETpwd"
+            android:id="@+id/edtPasswordRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -157,7 +157,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonlogin"
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"

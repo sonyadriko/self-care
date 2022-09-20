@@ -1,11 +1,16 @@
 package com.example.self_care.view.profile
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.self_care.R
+import com.example.self_care.view.auth.LoginActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +27,11 @@ class ProfileFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var auth: FirebaseAuth
+    private var databaseReference :  DatabaseReference? = null
+    private var database: FirebaseDatabase? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,7 +45,44 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
+        databaseReference = database?.reference!!.child("profile")
+
+        loadProfile()
+
+
+//        buttonLogout.setOnClickListener {
+//            auth.signOut()
+//            startActivity(Intent(context, LoginActivity::class.java))
+//            activity?.finish()
+//        }
+
         return inflater.inflate(R.layout.fragment_profile, container, false)
+
+
+    }
+
+    private fun loadProfile() {
+        val user = auth.currentUser
+        val userreference = databaseReference?.child(user?.uid!!)
+
+//        tvEmailAkun.text = user?.email
+
+        userreference?.addValueEventListener(object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                tvNamaAkun.text = snapshot.child("Name").value.toString()
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+
+
+
     }
 
     companion object {

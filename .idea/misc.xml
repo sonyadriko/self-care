@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Repo/self-care/app/src/main/res/layout/activity_login.xml" value="0.1661600810536981" />
+        <entry key="..\:/Repo/self-care/app/src/main/res/layout/activity_sign_up.xml" value="0.1661600810536981" />
+        <entry key="..\:/Repo/self-care/app/src/main/res/layout/fragment_home.xml" value="0.17135416666666667" />
+        <entry key="..\:/Repo/self-care/app/src/main/res/layout/fragment_profile.xml" value="0.4774281805745554" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/drawable/bg_header.xml" value="0.2985" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_home.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/layout/activity_home2.xml" value="0.18802083333333333" />
