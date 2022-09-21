@@ -45,22 +45,23 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+
+
+
+
+        return inflater.inflate(R.layout.fragment_profile, container, false)
+
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
         databaseReference = database?.reference!!.child("profile")
 
         loadProfile()
-
-
-//        buttonLogout.setOnClickListener {
-//            auth.signOut()
-//            startActivity(Intent(context, LoginActivity::class.java))
-//            activity?.finish()
-//        }
-
-        return inflater.inflate(R.layout.fragment_profile, container, false)
-
-
     }
 
     private fun loadProfile() {
@@ -81,7 +82,11 @@ class ProfileFragment : Fragment() {
             }
         })
 
-
+        buttonLogout.setOnClickListener {
+            auth.signOut()
+            startActivity(Intent(context, LoginActivity::class.java))
+            activity?.finish()
+        }
 
     }
 

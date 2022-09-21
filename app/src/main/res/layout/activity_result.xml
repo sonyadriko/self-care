@@ -59,6 +59,18 @@
             android:textStyle="bold"
             android:textColor="@color/black"/>
 
+        <TextView
+            android:id="@+id/Result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Semangat"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
