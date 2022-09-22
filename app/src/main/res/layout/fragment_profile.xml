@@ -62,8 +62,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/layoutButton"
-            android:layout_below="@+id/layoutAkun"
+            android:layout_alignParentBottom="true"
             android:layout_marginTop="20dp">
+
+            <!--            android:layout_below="@+id/layoutAkun"-->
 
             <Button
                 android:id="@+id/buttonLogout"

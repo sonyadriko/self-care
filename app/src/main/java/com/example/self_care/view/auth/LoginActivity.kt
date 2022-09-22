@@ -27,10 +27,10 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.withoutlogin.setOnClickListener {
-            val intent = Intent(this, HomeActivity2::class.java)
-            startActivity(intent)
-        }
+//        binding.withoutlogin.setOnClickListener {
+//            val intent = Intent(this, HomeActivity2::class.java)
+//            startActivity(intent)
+//        }
 
         binding.btnLogin.setOnClickListener {
             val email = binding.edtEmailLogin.text.toString()

@@ -197,22 +197,22 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <TextView
-            android:id="@+id/withoutlogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="Without Login"
-            android:textColor="#000"
+<!--        <TextView-->
+<!--            android:id="@+id/withoutlogin"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="Without Login"-->
+<!--            android:textColor="#000"-->
 
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.497"-->
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonlogin"
-            tools:ignore="MissingConstraints" />
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/buttonlogin"-->
+<!--            tools:ignore="MissingConstraints" />-->
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
