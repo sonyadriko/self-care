@@ -6,7 +6,7 @@
 
     android:background="#EAEBEE"
     android:layout_height="match_parent"
-    tools:context=".view.auth.SignUpActivity">
+    tools:context=".feature.auth.SignUpActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"

@@ -1,12 +1,12 @@
-package com.example.self_care.view.home
+package com.example.self_care.feature.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.self_care.view.profile.ProfileFragment
+import com.example.self_care.feature.profile.ProfileFragment
 import com.example.self_care.R
 import com.example.self_care.databinding.ActivityHome2Binding
-import com.example.self_care.view.artikel.ArtikelFragment
+import com.example.self_care.feature.artikel.ArtikelFragment
 
 class HomeActivity2 : AppCompatActivity() {
 

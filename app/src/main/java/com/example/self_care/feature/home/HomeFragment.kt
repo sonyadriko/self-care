@@ -1,4 +1,4 @@
-package com.example.self_care.view.home
+package com.example.self_care.feature.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.example.self_care.view.test.PreTestActivity
+import com.example.self_care.feature.test.view.PreTestActivity
 import com.example.self_care.R
 
 // TODO: Rename parameter arguments, choose names that match

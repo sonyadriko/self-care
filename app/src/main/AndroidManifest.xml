@@ -10,25 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SelfCare">
         <activity
-            android:name=".view.artikel.ArtikelActivity"
+            android:name=".feature.artikel.ArtikelActivity"
             android:exported="false" />
         <activity
-            android:name=".view.test.ResultActivity"
+            android:name=".feature.test.view.ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".view.test.PreTestActivity"
+            android:name=".feature.test.view.PreTestActivity"
             android:exported="false" />
         <activity
-            android:name=".view.home.HomeActivity2"
+            android:name=".feature.home.HomeActivity2"
             android:exported="false" />
         <activity
-            android:name=".view.home.HomeActivity"
+            android:name=".feature.home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".view.auth.SignUpActivity"
+            android:name=".feature.auth.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".view.auth.SplashScreen"
+            android:name=".feature.auth.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.auth.LoginActivity"
+            android:name=".feature.auth.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -1,4 +1,4 @@
-package com.example.self_care.view.artikel
+package com.example.self_care.feature.artikel
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.self_care.R
 import com.example.self_care.domain.Artikel
-import com.github.core.listener.OnClickListener
+import com.github.core.common.listener.OnClickListener
 
 class ArtikelFragment : Fragment(), OnClickListener {
 

@@ -1,4 +1,4 @@
-package com.example.self_care.view.profile
+package com.example.self_care.feature.profile
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.self_care.R
-import com.example.self_care.view.auth.LoginActivity
+import com.example.self_care.feature.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_profile.*

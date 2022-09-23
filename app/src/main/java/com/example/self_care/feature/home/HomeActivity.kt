@@ -1,4 +1,4 @@
-package com.example.self_care.view.home
+package com.example.self_care.feature.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

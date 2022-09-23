@@ -1,4 +1,4 @@
-package com.example.self_care.view.test
+package com.example.self_care.feature.test.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

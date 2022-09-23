@@ -1,4 +1,4 @@
-package com.example.self_care.view.artikel
+package com.example.self_care.feature.artikel
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.self_care.R
 import com.example.self_care.domain.Artikel
-import com.github.core.listener.OnClickListener
+import com.github.core.common.listener.OnClickListener
 import com.google.android.material.imageview.ShapeableImageView
 
 class ArtikelListAdapter(

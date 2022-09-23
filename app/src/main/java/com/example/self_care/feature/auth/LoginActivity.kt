@@ -1,4 +1,4 @@
-package com.example.self_care.view.auth
+package com.example.self_care.feature.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import com.example.self_care.databinding.ActivityLoginBinding
-import com.example.self_care.view.home.HomeActivity2
+import com.example.self_care.feature.home.HomeActivity2
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {

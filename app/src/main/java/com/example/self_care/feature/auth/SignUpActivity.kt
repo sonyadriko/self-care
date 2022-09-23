@@ -1,4 +1,4 @@
-package com.example.self_care.view.auth
+package com.example.self_care.feature.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

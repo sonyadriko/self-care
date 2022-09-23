@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#EAEBEE"
     android:layout_height="match_parent"
-    tools:context=".view.auth.SplashScreen">
+    tools:context=".feature.auth.SplashScreen">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
