@@ -1,42 +1,49 @@
 package com.example.self_care.feature.profile
 
+import android.app.Activity.RESULT_OK
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.self_care.R
+import com.example.self_care.databinding.FragmentProfileBinding
 import com.example.self_care.feature.auth.LoginActivity
+import com.example.self_care.feature.auth.SignUpActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.fragment_profile.*
+import java.io.ByteArrayOutputStream
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProfileFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
 
     private lateinit var auth: FirebaseAuth
     private var databaseReference :  DatabaseReference? = null
     private var database: FirebaseDatabase? = null
 
+    private lateinit var binding : FragmentProfileBinding
+    private lateinit var storageReference : StorageReference
+    private lateinit var imageUri : Uri
+    private lateinit var dialog : Dialog
+
+    companion object{
+        const val REQUEST_CAMERA = 100
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
         }
     }
 
@@ -45,12 +52,15 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        binding = FragmentProfileBinding.inflate(layoutInflater)
 
 
 
 
 
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+
+
+        return binding.root
 
 
     }
@@ -61,8 +71,39 @@ class ProfileFragment : Fragment() {
         database = FirebaseDatabase.getInstance()
         databaseReference = database?.reference!!.child("profile")
 
+//        binding.buttonEditProfile.setOnClickListener {
+//            val intent = Intent(context, SignUpActivity::class.java)
+//            startActivity(intent)
+//        }
+
+//        binding.ivProfile.setOnClickListener{
+//            intentCamera()
+//        }
+
+//        binding.buttonSaveProfile.setOnClickListener {
+//            uploadProfilePic()
+//        }
+
+
+
         loadProfile()
+
+
     }
+
+//    private fun uploadProfilePic() {
+//        imageUri = Uri.parse("android.resource://${activity?.packageName}/${R.drawable.profile}")
+//        storageReference = FirebaseStorage.getInstance().getReference("Users"+auth.currentUser?.uid)
+//        storageReference.putFile(imageUri).addOnSuccessListener {
+//            Toast.makeText(context, "Profile successfuly updated", Toast.LENGTH_SHORT).show()
+//        }.addOnFailureListener{
+//            Toast.makeText(context, "Failed to upload the image", Toast.LENGTH_SHORT).show()
+//        }
+//
+//    }
+
+
+
 
     private fun loadProfile() {
         val user = auth.currentUser
@@ -74,6 +115,7 @@ class ProfileFragment : Fragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 tvNamaAkun.text = snapshot.child("Name").value.toString()
+                tvEmailAkun.text = snapshot.child("Email").value.toString()
 
             }
 
@@ -90,23 +132,47 @@ class ProfileFragment : Fragment() {
 
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfileFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProfileFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
+
+//    private fun intentCamera() {
+//        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also {
+//                intent ->
+//            activity?.packageManager?.let {
+//                intent.resolveActivity(it).also {
+//                    startActivityForResult(intent, REQUEST_CAMERA)
+//                }
+//            }
+//        }
+//    }
+//
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        if (requestCode == REQUEST_CAMERA && requestCode == RESULT_OK){
+//            val imgBitmap = data?.extras?.get("data") as Bitmap
+//            uploadImage(imgBitmap)
+//        }
+//    }
+//
+//    private fun uploadImage(imgBitmap: Bitmap) {
+//        TODO("Not yet implemented")
+//        val baos = ByteArrayOutputStream()
+//        val ref = FirebaseStorage.getInstance().reference.child("img/${FirebaseAuth.getInstance().currentUser?.uid}")
+//
+//        imgBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+//        val image = baos.toByteArray()
+//
+//        ref.putBytes(image)
+//            .addOnCompleteListener{ it ->
+//                if (it.isSuccessful){
+//                    ref.downloadUrl.addOnCompleteListener {
+//                        it.result?.let {
+//                            imageUri = it
+//                            ivProfile.setImageBitmap(imgBitmap)
+//                        }
+//                    }
+//                }
+//            }
+//    }
+
+
 }

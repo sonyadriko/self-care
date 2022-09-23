@@ -81,6 +81,7 @@ class SignUpActivity : AppCompatActivity() {
                     val currentUser = auth.currentUser
                     val currentUSerDb = databaseReference?.child((currentUser?.uid!!))
                     currentUSerDb?.child("Name")?.setValue(edtNameRegister.text.toString())
+                    currentUSerDb?.child("Email")?.setValue(edtEmailRegister.text.toString())
                     Toast.makeText(this, "Register Berhasil", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)

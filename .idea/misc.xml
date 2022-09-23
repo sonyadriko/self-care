@@ -6,6 +6,7 @@
         <entry key="..\:/Repo/self-care/app/src/main/res/layout/activity_login.xml" value="0.1661600810536981" />
         <entry key="..\:/Repo/self-care/app/src/main/res/layout/activity_result.xml" value="0.18802083333333333" />
         <entry key="..\:/Repo/self-care/app/src/main/res/layout/activity_sign_up.xml" value="0.1661600810536981" />
+        <entry key="..\:/Repo/self-care/app/src/main/res/layout/dialog_wait.xml" value="0.20729166666666668" />
         <entry key="..\:/Repo/self-care/app/src/main/res/layout/fragment_home.xml" value="0.17135416666666667" />
         <entry key="..\:/Repo/self-care/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/drawable/bg_header.xml" value="0.2985" />
@@ -21,8 +22,7 @@
         <entry key="..\:/Users/sony/AndroidStudioProjects/SelfCare/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/activity_artikel.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_home2.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/activity_pre_test.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/activity_result.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_pre_test.xml" value="0.35625" />
       </map>
     </option>
   </component>
