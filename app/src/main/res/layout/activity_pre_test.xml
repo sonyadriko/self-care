@@ -38,7 +38,6 @@
                     android:max="5"
                     android:minHeight="50dp"
                     style="?android:progressBarStyleHorizontal"/>
-                />
                 <TextView
                     android:id="@+id/progress_text"
                     android:layout_width="wrap_content"
@@ -111,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Submit"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textStyle="bold"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>

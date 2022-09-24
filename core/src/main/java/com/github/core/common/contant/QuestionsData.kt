@@ -1,6 +1,14 @@
 package com.github.core.common.contant
 
 object QuestionsData {
+    fun calculateTotalScore(score: Int): Int {
+        when (score) {
+            // calculate score here
+        }
+
+        return 0
+    }
+
     val questions = listOf(
         "Perasaan Ansietas - Cemas\n" +
                 "- Firasat Buruk\n" +
