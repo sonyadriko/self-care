@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Repo/self-care/app/src/main/res/drawable/background_blue_btn.xml" value="0.195" />
+        <entry key="..\:/Repo/self-care/app/src/main/res/drawable/background_white_btn.xml" value="0.195" />
         <entry key="..\:/Repo/self-care/app/src/main/res/layout/activity_artikel.xml" value="0.18802083333333333" />
         <entry key="..\:/Repo/self-care/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/Repo/self-care/app/src/main/res/layout/activity_result.xml" value="0.18802083333333333" />
