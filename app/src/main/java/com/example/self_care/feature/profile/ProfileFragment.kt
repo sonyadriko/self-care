@@ -1,5 +1,6 @@
 package com.example.self_care.feature.profile
 
+import android.app.ActionBar
 import android.app.Activity.RESULT_OK
 import android.app.Dialog
 import android.content.Intent
@@ -12,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.self_care.R
 import com.example.self_care.databinding.FragmentProfileBinding
 import com.example.self_care.feature.auth.LoginActivity
@@ -34,6 +36,8 @@ class ProfileFragment : Fragment() {
     private lateinit var storageReference : StorageReference
     private lateinit var imageUri : Uri
     private lateinit var dialog : Dialog
+
+//    private lateinit var actionBar: ActionBar
 
     companion object{
         const val REQUEST_CAMERA = 100
@@ -70,6 +74,13 @@ class ProfileFragment : Fragment() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
         databaseReference = database?.reference!!.child("profile")
+
+        (activity as AppCompatActivity).supportActionBar?.title = "Profile"
+
+        // showing the back button in action bar
+
+
+
 
 //        binding.buttonEditProfile.setOnClickListener {
 //            val intent = Intent(context, SignUpActivity::class.java)
