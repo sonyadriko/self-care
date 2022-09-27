@@ -11,7 +11,7 @@ data class QuestionData (
     var correct_ans:Int
 ) {
     companion object {
-        const val score:String="score"
+
 
         fun getQuestion():ArrayList<QuestionData>{
             var que:ArrayList<QuestionData> = arrayListOf()

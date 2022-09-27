@@ -1,12 +1,15 @@
 package com.github.core.common.contant
 
-object QuestionsData {
-    fun calculateTotalScore(score: Int): Int {
-        when (score) {
-            // calculate score here
-        }
+const val SCORE = "score"
 
-        return 0
+object QuestionsData {
+    fun calculateTotalScore(score: Int): Score = when (score) {
+        in 0..13 -> Score.TIDAK_ADA
+        in 14..20 -> Score.RINGAN
+        in 21..27 -> Score.SEDANG
+        in 28..41 -> Score.BERAT
+        in 42..56 -> Score.BERAT_SEKALI
+        else -> Score.TIDAK_ADA
     }
 
     val questions = listOf(
