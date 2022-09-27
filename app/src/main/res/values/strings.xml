@@ -34,4 +34,8 @@
     <string name="head_8">Anxiety Disorders: Ketika Cemas Terus Membayangi Diri</string>
     <string name="head_9">Trillions of cicadas set to emerge in the US, here\'s why</string>
     <string name="head_10">Homemaker, economist: Candidates from all walks of life in Bengal assembly</string>
+
+    <!--  Placeholders  -->
+    <string name="go_to_next">Go To Next</string>
+    <string name="finish">Finish</string>
 </resources>
