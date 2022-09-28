@@ -63,7 +63,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
             android:drawablePadding="20dp"
             android:hint="Your Email"
             android:minHeight="48dp"
