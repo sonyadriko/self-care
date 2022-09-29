@@ -50,6 +50,7 @@ class PreTestActivity : AppCompatActivity() {
                 opt.background=ContextCompat.getDrawable(this, R.drawable.question_option)
                 opt.typeface= Typeface.DEFAULT
             }
+            binding.submit.isEnabled = false
 
             val question = viewModel.question
             binding.questionText.text = question[state.progress-1].question
@@ -100,5 +101,7 @@ class PreTestActivity : AppCompatActivity() {
                 i.typeface= Typeface.DEFAULT
             }
         }
+
+        binding.submit.isEnabled = true
     }
 }
