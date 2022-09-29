@@ -1,6 +1,7 @@
 package com.github.core.common.contant
 
-const val SCORE = "score"
+const val SCORE_INT_EXTRA = "score_int_extra"
+const val SCORE_DATA_EXTRA = "score_data_extra"
 
 object QuestionsData {
     fun calculateTotalScore(score: Int): Score = when (score) {
