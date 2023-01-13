@@ -1,21 +1,21 @@
 package com.example.self_care.feature.test.view
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.self_care.R
 import com.example.self_care.databinding.ActivityPreTestBinding
-import com.example.self_care.domain.QuestionData
+import com.example.self_care.domain.test.Result
 import com.example.self_care.feature.test.viewmodel.TestViewEffect
 import com.example.self_care.feature.test.viewmodel.TestViewEvent
 import com.example.self_care.feature.test.viewmodel.TestViewModel
-import com.github.core.common.contant.SCORE
-import kotlin.math.max
+import com.github.core.common.contant.SCORE_DATA_EXTRA
+import com.github.core.common.contant.SCORE_INT_EXTRA
 
 class PreTestActivity : AppCompatActivity() {
 
@@ -40,28 +40,37 @@ class PreTestActivity : AppCompatActivity() {
         options = listOf(binding.opt0, binding.opt1, binding.opt2, binding.opt3, binding.opt4)
     }
 
+    @SuppressLint("SetTextI18n")
     private fun initObserver() {
         viewModel.progressLiveData.observe(this) { state ->
             if (state.isLast) binding.submit.text = getString(R.string.finish)
 
-            binding.questionText.text = viewModel.question[state.progress].question
+            options.forEach { opt ->
+                opt.setTextColor(Color.parseColor("#555151"))
+                opt.background=ContextCompat.getDrawable(this, R.drawable.question_option)
+                opt.typeface= Typeface.DEFAULT
+            }
+            binding.submit.isEnabled = false
+
+            val question = viewModel.question
+            binding.questionText.text = question[state.progress-1].question
+            binding.progressText.text = "${state.progress}/${question.size}"
             binding.progressBar.apply {
-                progress = state.progress+1
-                max = viewModel.question.size
+                progress = state.progress
+                if (max != viewModel.question.size) max = question.size
             }
         }
 
         viewModel.viewEffect.observe(this) { effect ->
             when (effect) {
-                is TestViewEffect.nextActivityEffect -> {
-//                    var intent= Intent(this,ResultActivity::class.java)
-////                        intent.putExtra(setData.name,Name.toString())
-//                    intent.putExtra(SCORE, score.toString())
-//                    intent.putExtra("total size",questionList!!.size.toString())
-//
-//                    startActivity(intent)
-//                    finish()
+                is TestViewEffect.NextActivityEffect -> {
+                    val intent= Intent(this,ResultActivity::class.java)
+                    intent.putExtra(SCORE_DATA_EXTRA, effect.bundle?.get(SCORE_INT_EXTRA) as Result)
+
+                    startActivity(intent)
+                    finish()
                 }
+                else -> {} // do nothing
             }
         }
     }
@@ -92,5 +101,7 @@ class PreTestActivity : AppCompatActivity() {
                 i.typeface= Typeface.DEFAULT
             }
         }
+
+        binding.submit.isEnabled = true
     }
 }

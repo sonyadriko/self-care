@@ -3,8 +3,10 @@ package com.example.self_care.feature.test.viewmodel
 import android.os.Bundle
 import androidx.lifecycle.*
 import com.example.self_care.domain.test.Question
+import com.example.self_care.domain.test.Result
 import com.github.core.common.contant.QuestionsData
-import com.github.core.common.contant.Score
+import com.github.core.common.contant.SCORE_INT_EXTRA
+import java.lang.Exception
 
 class TestViewModel: ViewModel() {
     private val _question = mutableListOf<Question>()
@@ -14,8 +16,6 @@ class TestViewModel: ViewModel() {
     val progressLiveData: LiveData<State> get() = _progressLiveData
 
     private var selectedScore: Int = 0
-
-    private val _viewEvent = MutableLiveData<TestViewEvent>()
 
     private val _viewEffect = MutableLiveData<TestViewEffect>()
     val viewEffect: LiveData<TestViewEffect> get() = _viewEffect
@@ -37,31 +37,43 @@ class TestViewModel: ViewModel() {
     }
 
     fun processEvent(event: TestViewEvent) {
-        val state = _progressLiveData.value!!
-        when (event) {
-            TestViewEvent.OnSubmitTest -> {
-                QuestionsData.calculateTotalScore(state.currentScore)
-            }
-            is TestViewEvent.OnAnswerTest -> {
-                if (state.isLast) {
-                    _viewEffect.value = TestViewEffect.nextActivityEffect()
-                    return
+        try {
+            val state = _progressLiveData.value!!
+            when (event) {
+                TestViewEvent.OnSubmitTest -> {
+                    QuestionsData.calculateTotalScore(state.currentScore)
                 }
+                is TestViewEvent.OnAnswerTest -> {
+                    if (state.isLast) {
+                        val result = Result(
+                            totalScore = _progressLiveData.value!!.currentScore,
+                            message = QuestionsData.calculateTotalScore(
+                                _progressLiveData.value!!.currentScore
+                            ).description
+                        )
 
-                val progress = state.progress+1
-                _progressLiveData.value = state.copy(
-                    progress = progress,
-                    currentScore = state.currentScore+selectedScore,
-                    isLast = progress+1 == question.size-1
-                )
+                        _viewEffect.value = TestViewEffect.NextActivityEffect(bundle = Bundle().apply {
+                            putParcelable(SCORE_INT_EXTRA, result)
+                        })
+                        return
+                    }
+
+                    val progress = state.progress+1
+                    _progressLiveData.value = state.copy(
+                        progress = progress,
+                        currentScore = state.currentScore+selectedScore,
+                        isLast = progress == question.size-1
+                    )
+                }
             }
+        } catch (e: Exception) {
+            _viewEffect.value = TestViewEffect.ToastEffect()
         }
     }
 
     data class State(
         val progress: Int = 0,
         val currentScore: Int = 0,
-        val totalScore: Score = Score.TIDAK_ADA,
         val isLast: Boolean = false,
     )
 }
@@ -72,5 +84,6 @@ sealed class TestViewEvent {
 }
 
 sealed class TestViewEffect {
-    data class nextActivityEffect(val bundle: Bundle? = null): TestViewEffect()
+    data class NextActivityEffect(val bundle: Bundle? = null): TestViewEffect()
+    data class ToastEffect(val message: String = "Something Wrong"): TestViewEffect()
 }
